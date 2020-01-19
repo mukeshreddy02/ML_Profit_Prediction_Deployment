@@ -13,7 +13,7 @@ y = df.iloc[:, 4].values
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 labelencoder = LabelEncoder()
 X[:, 3] = labelencoder.fit_transform(X[:, 3])
-onehotencoder = OneHotEncoder()
+onehotencoder = OneHotEncoder(categirical_features = [3])
 X = onehotencoder.fit_transform(X).toarray()
 
 # Avoiding the Dummy Variable Trap
